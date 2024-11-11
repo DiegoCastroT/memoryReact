@@ -1,4 +1,6 @@
 import React from "react";
+import Card from "./Card";
+
 
 /**
  * Board has 9 cards.
@@ -11,7 +13,15 @@ function Board() {
 
         //background.
         <div className="background">
-
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
         </div>
     )
 }
