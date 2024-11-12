@@ -35,3 +35,33 @@
     background-size: cover;
     background-position: center;
 }
+
+.flippedCard {
+    width: 100px;
+    height: 150px;
+    background-image: url("/public/images/card.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.card1 {
+    width: 100px;
+    height: 150px;
+    background-image: url("/public/images/card1.png");
+    background-size: cover;
+    background-position: center;
+}
+.card2 {
+    width: 100px;
+    height: 150px;
+    background-image: url("/public/images/card2.png");
+    background-size: cover;
+    background-position: center;
+}
+.card3 {
+    width: 100px;
+    height: 150px;
+    background-image: url("/public/images/card3.png");
+    background-size: cover;
+    background-position: center;
+}

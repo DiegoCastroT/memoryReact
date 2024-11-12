@@ -3,7 +3,7 @@ import Card from "./Card";
 
 
 /**
- * Board has 9 cards.
+ * The Board has nine cards.
  * @returns {Element}
  * @constructor
  */

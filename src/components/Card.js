@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Card() {
 
     const [isFlipped, setIsFlipped] = useState(false);
-
     const flipCard = () => {
         setIsFlipped(!isFlipped);
     };
@@ -14,14 +13,22 @@ function Card() {
         return (
             <div className="cardPosition">
                 <div className="card">
-                    <div className="flippedCard">
+                    <div className="flippedCard" onClick={flipCard}>
 
                     </div>
                 </div>
             </div>
         )
     } else {
+        return (
+            <div className="cardPosition">
+                <div className="card1">
+                    <div className="unflippedCard" onClick={flipCard}>
 
+                    </div>
+                </div>
+            </div>
+        )
     }
 
 }
