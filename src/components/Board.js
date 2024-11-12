@@ -11,7 +11,7 @@ function Board() {
 
     const createCardPairs = () => {
         const pairs = [];
-        for (let i = 1; i <= 9; i++) {
+        for (let i = 1; i <= 4; i++) {
             pairs.push({ id: i, matched: false });
             pairs.push({ id: i, matched: false });
         }

@@ -9,6 +9,9 @@ function Card({ id, matched, onClick, index }) {
         setIsFlipped(!isFlipped);
     };
 
+    const cardClass = `card${id}`;
+
+
     if (!isFlipped) {
         return (
             <div className="cardPosition">
@@ -20,8 +23,8 @@ function Card({ id, matched, onClick, index }) {
     } else {
         return (
             <div className="cardPosition">
-                <div className="card1" onClick={flipCard}>
-                    <div className="unflippedCard" />
+                <div className={`${cardClass}`} onClick={flipCard}>
+                    <div className="unflippedCard"/>
                 </div>
             </div>
         );
