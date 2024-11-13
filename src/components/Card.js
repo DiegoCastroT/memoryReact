@@ -1,34 +1,27 @@
 import React from "react";
-import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Card({ id, matched, onClick, index }) {
-    const [isFlipped, setIsFlipped] = useState(false);
+function Card({ id, matched, isFlipped, onClick}) {
 
-    const flipCard = () => {
-        setIsFlipped(!isFlipped);
-    };
-
-    const cardClass = `card${id}`;
+    // The cardCss is used to set the card's css
+    const cardCss = `card${id}`;
 
 
-    if (!isFlipped) {
-        return (
-            <div className="cardPosition">
-                <div className="card" onClick={flipCard}>
-                    <div className="flippedCard" />
-                </div>
-            </div>
-        );
+    let cardContent;
+
+    if (isFlipped || matched) {
+        cardContent = <div className="unflippedCard" />;
     } else {
-        return (
-            <div className="cardPosition">
-                <div className={`${cardClass}`} onClick={flipCard}>
-                    <div className="unflippedCard"/>
-                </div>
-            </div>
-        );
+        cardContent = <div className="flippedCard" />;
     }
+
+    return (
+        <div className="cardPosition" onClick={onClick}>
+            <div className={cardCss}>
+                {cardContent}
+            </div>
+        </div>
+    );
 }
 
 export default Card;
